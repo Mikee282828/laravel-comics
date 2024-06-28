@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    @include('partials.header')
     <h1>
-        Questa è la home home
+        Questa è la home ;)
     </h1>
-    <a href="/about">About</a>
     
 </body>
 </html>

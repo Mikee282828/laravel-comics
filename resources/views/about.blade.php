@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    @include('partials.header')
 
     @foreach ($books as $book)
         @if (@$loop->index % 3 == 0)
