@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = config("store");
+    $data = config("comics");
 
     return view('home',$data);
 });
