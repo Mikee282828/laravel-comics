@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>
-        Questa è la home
+        Questa è la home {{$zero}}
     </h1>
 </body>
 </html>
