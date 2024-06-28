@@ -14,11 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
-        'zero'=>'ciao0',
-        'uno'=>'ciao1',
-        'due'=>'ciao2'
-    ];
+    $data = config("store");
+
     return view('home',$data);
 });
 Route::get('/home', function () {
