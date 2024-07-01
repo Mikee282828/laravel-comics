@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use PhpOption\None;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,17 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return view('about',config("comics"));
 })->name("about");
+
+
+Route::get('/about/{indice}', function ($indice) {
+
+    if(array_key_exists($indice,config("comics.books"))){
+
+        return view('about',['books'=>[config("comics.books.$indice")]]);
+
+    }else{
+
+        return ("Riprova con un indice diverso");
+        
+    }
+});
