@@ -10,10 +10,20 @@
     </div> --}}
 
     <h1>Questo è l'header :)</h1>
+    <h2>Attualmente ti trovi su: {{ Route::currentRouteName() }}</h2>
     <nav>
         {{-- I link usano i percorsi dichiarati nelle rotte --}}
-        <a href="/">HOME</a>
-        <a href="/about">ABOUT</a>
+        @if (Route::currentRouteName() == 'home')
+            <a href='{{ route('home') }}' class="highlight">HOME</a>
+        @else
+            <a href='{{ route('home') }}' class="">HOME</a>
+        @endif
+
+        @if (Route::currentRouteName() == 'about')
+            <a href='{{ route('about') }}' class="highlight">ABOUT</a>
+        @else
+            <a href='{{ route('about') }}' class="">ABOUT</a>
+        @endif
     </nav>
-    
+
 </header>
